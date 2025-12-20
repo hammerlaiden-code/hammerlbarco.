@@ -116,17 +116,7 @@ background:linear-gradient(135deg,var(--gold),#b8953f);
 border:none;color:#000;font-weight:800}
 
 /* MOBILE */
-@media(max-width:900px){
-  .hero{min-height:110vh}
-
-  /* MOBILE PHOTO BRIGHTNESS BOOST */
-  .photo-half{
-    position:absolute;
-    width:100%;
-    height:50%;
-    opacity:.45;
-    filter:brightness(1.28) contrast(108%) saturate(118%);
-  /* MOBILE LOGO FIX — keep CO. off divider line */
+@media(max-width:900px){/* MOBILE LOGO FIX — keep CO. off divider line */
 .hero-center {
   transform: translateY(-18px);
 }
@@ -151,6 +141,16 @@ border:none;color:#000;font-weight:800}
       transparent 66%,
       rgba(0,0,0,.8));
 }
+
+  .hero{min-height:110vh}
+
+  /* MOBILE PHOTO BRIGHTNESS BOOST */
+  .photo-half{
+    position:absolute;
+    width:100%;
+    height:50%;
+    opacity:.45;
+    filter:brightness(1.28) contrast(108%) saturate(118%);
 }
 
   .left{ top:0; }
