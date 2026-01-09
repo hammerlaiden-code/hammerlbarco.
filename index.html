@@ -1,34 +1,89 @@
-<style>
-/* ONLY affects the About section */
-#about .about-wrap { display: flex; gap: 32px; align-items: flex-start; }
-#about .about-left { flex: 1; }
-#about .about-right { width: 200px; }
 
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+#about .about-wrap{
+  display:flex;
+  gap:32px;
+  align-items:flex-start;
+}
+
+#about .about-left{
+  flex:1;
+}
+
+#about .about-right{
+  width:200px;
+}
+
+/* Badge */
 #about .social-proof{
-  display:flex; align-items:center; gap:8px;
+  display:flex;
+  align-items:center;
+  gap:8px;
   padding:7px 9px;
   background:rgba(0,0,0,.55);
   border:1px solid rgba(230,200,122,.25);
   border-radius:12px;
   max-width:200px;
 }
-#about .sp-label{ font-size:10px; color:#e6c87a; opacity:.9; line-height:1; }
-#about .sp-brand{ font-size:12px; font-weight:700; color:#e6c87a; line-height:1.1; }
-#about .sp-img{ width:48px; height:48px; border-radius:10px; object-fit:cover; border:1px solid rgba(230,200,122,.25); }
 
-#about .sp-arrow{ width:16px; height:2px; background:#e6c87a; position:relative; }
+#about .sp-label{
+  font-size:10px;
+  color:#e6c87a;
+  opacity:.9;
+  line-height:1;
+}
+
+#about .sp-brand{
+  font-size:12px;
+  font-weight:700;
+  color:#e6c87a;
+  line-height:1.1;
+}
+
+#about .sp-img{
+  width:48px;
+  height:48px;
+  border-radius:10px;
+  object-fit:cover;
+  border:1px solid rgba(230,200,122,.25);
+}
+
+/* Arrow */
+#about .sp-arrow{
+  width:16px;
+  height:2px;
+  background:#e6c87a;
+  position:relative;
+}
+
 #about .sp-arrow::after{
-  content:""; position:absolute; right:-2px; top:50%;
+  content:"";
+  position:absolute;
+  right:-2px;
+  top:50%;
   transform:translateY(-50%) rotate(45deg);
-  width:7px; height:7px;
+  width:7px;
+  height:7px;
   border-right:2px solid #e6c87a;
   border-top:2px solid #e6c87a;
 }
 
+/* Mobile */
 @media (max-width:768px){
-  #about .about-wrap{ flex-direction:column; }
-  #about .about-right{ width:100%; }
-  #about .social-proof{ justify-content:center; margin-top:14px; }
+  #about .about-wrap{
+    flex-direction:column;
+  }
+
+  #about .about-right{
+    width:100%;
+  }
+
+  #about .social-proof{
+    justify-content:center;
+    margin-top:14px;
+  }
 }
 </style>
 
@@ -431,6 +486,7 @@ We handle setup, service, and breakdown so you can focus on your guests.
 
 
 <div class="section-wrap" id="about">
+
   <div class="about-wrap">
 
     <!-- LEFT: About text -->
@@ -457,8 +513,13 @@ We handle setup, service, and breakdown so you can focus on your guests.
 
         <div class="sp-arrow"></div>
 
-        <img class="sp-img"
-          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx4lGB0YIC0kICgsJyoqHh8ZJDUlKC0vMjIyGiI4PTcwPCsx
+        <img class="sp-img" src="images/wingnutz.jpg" alt="Wingnutz TikTok feature">
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 
 <div class="section-wrap" id="quote">
