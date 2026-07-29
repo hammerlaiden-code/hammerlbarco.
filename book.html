@@ -830,51 +830,6 @@ text-align:center;}
 }
 </style>
 <style>
-.photo-slideshow{
-  position:relative;
-  width:calc(100% - 40px);
-  max-width:420px;
-  max-height:280px;
-  aspect-ratio:4/3;
-  margin:24px auto;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 14px 40px rgba(0,0,0,.5);
-  transition:aspect-ratio .5s ease;
-}
-.photo-slideshow .ms-slide{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1s ease;
-}
-.photo-slideshow .ms-slide.active{opacity:1;}
-.photo-slideshow .ms-dots{
-  position:absolute;
-  bottom:10px;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:center;
-  gap:6px;
-}
-.photo-slideshow .ms-dots span{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:rgba(255,255,255,.4);
-  transition:background .3s ease;
-}
-.photo-slideshow .ms-dots span.active{background:var(--gold);}
-@media(min-width:769px){
-  .photo-slideshow{
-    max-width:520px;
-    max-height:360px;
-  }
-}
-
 </style>
 </head>
 <body>
@@ -890,33 +845,6 @@ text-align:center;}
 <div style="position:relative;z-index:1;">
 
 <div class="sparkle-container"><span class="sparkle" style="left:12%; top:6%;"></span><span class="sparkle" style="left:58%; top:18%;"></span><span class="sparkle" style="left:81%; top:29%;"></span><span class="sparkle" style="left:29%; top:46%;"></span><span class="sparkle" style="left:65%; top:57%;"></span><span class="sparkle" style="left:9%; top:70%;"></span><span class="sparkle" style="left:44%; top:84%;"></span><span class="sparkle" style="left:92%; top:93%;"></span></div>
-
-<div class="photo-slideshow" id="bookSlideshow">
-  <div class="ms-slide active" data-ratio="916/1246" style="background-image:url('images/gallery/gallery-08-dessert-cocktail.jpg');"></div>
-  <div class="ms-slide" data-ratio="680/510" style="background-image:url('images/gallery/gallery-05-rv-bar-detail.jpg');"></div>
-  <div class="ms-slide" data-ratio="607/427" style="background-image:url('images/gallery/gallery-11-blue-cocktail.jpg');"></div>
-  <div class="ms-dots">
-    <span class="active"></span><span></span><span></span>
-  </div>
-</div>
-<script>
-(function(){
-  var container = document.getElementById('bookSlideshow');
-  var slides = document.querySelectorAll('#bookSlideshow .ms-slide');
-  var dots = document.querySelectorAll('#bookSlideshow .ms-dots span');
-  if(!slides.length) return;
-  container.style.aspectRatio = slides[0].getAttribute('data-ratio');
-  var i = 0;
-  setInterval(function(){
-    slides[i].classList.remove('active');
-    dots[i].classList.remove('active');
-    i = (i + 1) % slides.length;
-    slides[i].classList.add('active');
-    dots[i].classList.add('active');
-    container.style.aspectRatio = slides[i].getAttribute('data-ratio');
-  }, 3200);
-})();
-</script>
 
 <div class="hero" style="min-height:40vh;">
   <div class="hero-center" style="height:40vh;">

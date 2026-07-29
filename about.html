@@ -831,51 +831,6 @@ text-align:center;}
 </style>
 <style>
 /* Scattered background photos */
-.photo-slideshow{
-  position:relative;
-  width:calc(100% - 40px);
-  max-width:420px;
-  max-height:280px;
-  aspect-ratio:4/3;
-  margin:24px auto;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 14px 40px rgba(0,0,0,.5);
-  transition:aspect-ratio .5s ease;
-}
-.photo-slideshow .ms-slide{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1s ease;
-}
-.photo-slideshow .ms-slide.active{opacity:1;}
-.photo-slideshow .ms-dots{
-  position:absolute;
-  bottom:10px;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:center;
-  gap:6px;
-}
-.photo-slideshow .ms-dots span{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:rgba(255,255,255,.4);
-  transition:background .3s ease;
-}
-.photo-slideshow .ms-dots span.active{background:var(--gold);}
-@media(min-width:769px){
-  .photo-slideshow{
-    max-width:520px;
-    max-height:360px;
-  }
-}
-
 /* Page-specific nav additions */
 .top-nav-link.top-nav-home{order:-1;}
 </style>
@@ -893,33 +848,6 @@ text-align:center;}
 <div style="position:relative;z-index:1;">
 
 <div class="sparkle-container"><span class="sparkle" style="left:22%; top:9%;"></span><span class="sparkle" style="left:68%; top:14%;"></span><span class="sparkle" style="left:41%; top:33%;"></span><span class="sparkle" style="left:8%; top:52%;"></span><span class="sparkle" style="left:77%; top:61%;"></span><span class="sparkle" style="left:33%; top:78%;"></span><span class="sparkle" style="left:88%; top:88%;"></span><span class="sparkle" style="left:15%; top:95%;"></span></div>
-
-<div class="photo-slideshow" id="aboutSlideshow">
-  <div class="ms-slide active" data-ratio="680/510" style="background-image:url('images/gallery/gallery-07-corporate-event.jpg');"></div>
-  <div class="ms-slide" data-ratio="910/960" style="background-image:url('images/gallery/gallery-09-sidecar-cocktail.jpg');"></div>
-  <div class="ms-slide" data-ratio="640/640" style="background-image:url('images/gallery/gallery-10-red-cocktail.jpg');"></div>
-  <div class="ms-dots">
-    <span class="active"></span><span></span><span></span>
-  </div>
-</div>
-<script>
-(function(){
-  var container = document.getElementById('aboutSlideshow');
-  var slides = document.querySelectorAll('#aboutSlideshow .ms-slide');
-  var dots = document.querySelectorAll('#aboutSlideshow .ms-dots span');
-  if(!slides.length) return;
-  container.style.aspectRatio = slides[0].getAttribute('data-ratio');
-  var i = 0;
-  setInterval(function(){
-    slides[i].classList.remove('active');
-    dots[i].classList.remove('active');
-    i = (i + 1) % slides.length;
-    slides[i].classList.add('active');
-    dots[i].classList.add('active');
-    container.style.aspectRatio = slides[i].getAttribute('data-ratio');
-  }, 3200);
-})();
-</script>
 
 <div class="hero" style="min-height:46vh;">
   <div class="hero-center" style="height:46vh;">
