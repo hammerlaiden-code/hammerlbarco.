@@ -875,7 +875,8 @@ text-align:center;}
 <form id="bookingForm" action="https://formspree.io/f/mwvevwqg" method="POST">
 <input name="Name" placeholder="Your Name" required>
 <input name="Email" placeholder="Your Email" required>
-<input type="date" name="Event Date" placeholder="Event Date">
+<label for="eventDateInput" style="display:block;color:#ccc;font-size:13px;margin-bottom:6px;">Event Date</label>
+<input type="date" id="eventDateInput" name="Event Date">
 <select name="Event Type">
 <option value="">Event Type</option>
 <option>Wedding</option>
@@ -883,13 +884,7 @@ text-align:center;}
 <option>Private Party</option>
 <option>Other</option>
 </select>
-<select name="Guest Count">
-<option value="">Guest Count</option>
-<option>Under 25</option>
-<option>25–75</option>
-<option>75–150</option>
-<option>150+</option>
-</select>
+<input type="number" name="Guest Count" placeholder="Guest Count" min="1" inputmode="numeric">
 <textarea name="Details" placeholder="Anything else we should know? (optional)"></textarea>
 <p style="font-size:14px;opacity:.8;margin:4px 0 12px;">We respond to all requests within 24 hours.</p>
 <button type="submit" id="bookingSubmitBtn">Send Booking Request</button>
